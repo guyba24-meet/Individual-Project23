@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/home.js"></script>
+    <style type="text/css"></style>
+</head>
+<body>
+    <nav class="navbar">
+<div class="nav">
+    <img src="static/img/salt-and-pepper.png" class="brand-logo" alt="">
+    <div class="nav-items">
+        <form action="/search" method="POST">
+            <div class="search">
+                <input type="text" name = "searchbox" class="search-box" placeholder="search roduct">
+                <button class="submit-btn">search</button>
+            </div>
+        </form>
+        <a href="#"><img src="static/img/user.png" alt=""></a>
+        <a href="#"><img src="static/img/add-to-cart.png" alt=""></a>
+    </div>
+</div>
+    <ul class="links-container">
+        <li class="link-item"><a href="/login" class="link">log in</a></li>
+        <li class="link-item"><a href="/signup" class="link">Sign up</a></li>
+        <li class="link-item"><a href="#" class="link">log out</a></li>
+    </ul>
+</nav>
+<header class="hero-section">
+    <div class="content">
+        <img src="static/img/salt-and-pepper-white.png" class="logo" alt="">
+        <p class="sub-heading">Cold grind organic spices</p>
+    </div>
+</header>
+<section class="product">
+    <h2 class="product-category">best selling</h2>
+        <button class="pre-btn"><img src="static/img/arrow.jpg" alt=""></button>
+        <button class="nxt-btn"><img src="static/img/arrow.jpg" alt=""></button>
+    <div class="product-container">
+        <div class="product-card">
+            <a href = '/product/salt'>
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <span class="organic-tag">Organic</span>
+                    <img src="static/img/product-salt.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2 class="product-brand">Salt</h2>
+                <p class="product-short-des">Hickory smoked sea salt</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <a href = "product/pepper">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <span class="organic-tag">Organic</span>
+                    <img src="static/img/product-pepper.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2 class="product-brand">Black Pepper</h2>
+                <p class="product-short-des">Ground black pepper</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <a href = "product/paprika">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="static/img/product-paprika.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2 class="product-brand">Smoked Paprika</h2>
+                <p class="product-short-des">Spanish smoked hot Paprika</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <a href="/product/chili">
+                <div class="product-image">
+                    <span class="discount-tag"></span>
+                    <span class="organic-tag">Organic</span>
+                    <img src="static/img/product-chili.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2 class="product-brand">Chili Powder</h2>
+                <p class="product-short-des">Mexican chili Powder</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <a href="/product/oregano">
+                <div class="product-image">
+                    <span class="discount-tag"></span>
+                    <span class="organic-tag">Organic</span>
+                    <img src="static/img/product-oregano.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+                <div class="product-info">
+                <h2 class="product-brand">Oregano</h2>
+                <p class="product-short-des">Dried oregano leaf</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <a href="/product/parsley">
+                <div class="product-image">
+                    <span class="discount-tag"></span>
+                    <span class="organic-tag">Organic</span>
+                    <img src="static/img/product-parsley.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2 class="product-brand">Parsley</h2>
+                <p class="product-short-des">Parsley flakes</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <a href="/product/onion">
+                <div class="product-image">
+                    <span class="discount-tag"></span>
+                    <img src="static/img/product-onion.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2 class="product-brand">Onion Powder</h2>
+                <p class="product-short-des">Gluten-free onion powder</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <a href="/product/garlic">
+                <div class="product-image">
+                    <span class="discount-tag"></span>
+                    <img src="static/img/product-garlic.webp" class="product-thumb" alt="">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2 class="product-brand">Garlic</h2>
+                <p class="product-short-des">Freshly granulated</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
