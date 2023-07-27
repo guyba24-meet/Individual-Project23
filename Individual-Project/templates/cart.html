@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
-    {%for product in user_cart%}
-    {{product}}
-    {%endfor%}
+    <style type="text/css">
+        body{
+            font-family: 'roboto', sans-serif;
+            overflow-x: hidden;
+        }
+        .product{
+            margin: auto;
+            width:80%;
+            height:300px;
+            border-bottom: 1px;
+            border-left: 0px;
+            border-right: 0px;
+            border-top: 1px;
+            border-style: dashed;
+            padding: 10px;
+        }
+    </style>
+    <section class = "cart">
+        <h1>Your Cart</h1>
+        {%for product in user_cart%}
+        <div class = "product">
+            {{product}}
+        </div>
+        {%endfor%}
+    </section>
 </body>
 </html>

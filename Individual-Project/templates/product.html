@@ -37,9 +37,9 @@
                 <span class="product-actual-price">{{product_act_price}}</span>
                 <span class="product-discount">{{product_discount}}</span>
             </div>
-            <a href = /cart/{{product}}>
-                <button class="btn cart-btn">add to cart</button>
-            </a>
+            <form action="/cart/{{product}}" method = "POST">
+                <input type="submit" value="add to cart" class="btn cart-btn">
+            </form>
         </div>
     </section>
 </body>

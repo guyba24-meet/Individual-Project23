@@ -18,10 +18,12 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config['SECRET_KEY'] = 'super-secret-key'
 #Code goes below here
 
+latest_cart = []
+
 #Homepage
 @app.route('/')
 def homepage():
-    login_session["cart_list"] = []
+    login_session["cart_list"] = latest_cart
     return render_template('home.html')
 
 @app.route('/product/<string:product>')
@@ -73,14 +75,24 @@ def search():
     product = request.form['searchbox']
     return render_template('search.html', product=product)
 
-@app.route('/cart/<string:product>')
+@app.route('/cart/<string:product>', methods=['GET','POST'])
 def cart(product):
     try:
-        login_session["cart_list"].append(product)
-        UID = login_session['user']['localId']
-        cart_dict = {'products':cart}
-        db.child("Carts").child(UID).set(cart_dict)
-        return render_template('cart.html')
+        if request.method == 'POST':
+            latest_cart.append(product)
+            print(0)
+            login_session['cart_list'] = latest_cart
+            print(1)
+            UID = login_session['user']['localId']
+            print(2)
+            cart_dict = {'products': login_session["cart_list"]}
+            print(3)
+            db.child("Carts").child(UID).set(cart_dict)
+            print(4)
+            return redirect(url_for('cart',product=product))
+        else:
+            print(5)
+            return render_template('cart.html', user_cart = login_session["cart_list"])
     except:
         return redirect(url_for('login'))
 
